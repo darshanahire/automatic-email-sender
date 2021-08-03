@@ -34,7 +34,7 @@ app.use(router);
 // app.use("/send-mail",isTokenPresent,router)
 // app.use("/esend",isTokenPresent,router)
 // app.use("/api/sign-in",router)
-if(process.env.NODE_ENV != "production"){
+if(process.env.NODE_ENV == "production"){
     app.use(express.static("FrontEnd/build"));
 app.use(express.static("FrontEnd/build"));
 const path = require("path");
