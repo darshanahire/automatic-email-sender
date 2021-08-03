@@ -35,7 +35,7 @@ export default class Signup extends Component {
             event.preventDefault();
             alert("Signup sucessfully,please Login")
             console.log("user crated");
-            window.location.href="http://localhost:5000/login"
+            window.location.href="https://automatic-email-sender.herokuapp.com/login"
             
         }).catch((error) => {
             event.preventDefault();

@@ -37,7 +37,7 @@ export default class Login extends Component {
             event.preventDefault();
             // alert("user Login Successfully")
             console.log("user Login Successfully");
-            window.location.href="http://localhost:5000/"
+            window.location.href="https://automatic-email-sender.herokuapp.com/"
 
         }).catch((error) => {
             event.preventDefault();
