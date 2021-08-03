@@ -47,44 +47,44 @@ export default class Home extends Component {
         return (
 
 
-<>
-<div className="outer">
-        <div className="middle">
-          <div className="inner-home">
+            <>
+                <div className="outer">
+                    <div className="middle">
+                        <div className="inner-home" id="inner-right">
 
-          <h3 className="heading">Welcome to Atometed Email Sender App</h3>
-      <div className="heading2">
-          <button type="submit" to={'/send-mail'} className="btn btn-success" >Send Mail</button>
-          {/* <Link type="submit" className="btn btn-success" to={"/send-mail"}>Sign mail</Link> */}
-          </div>
-          </div>
-          <div className="img1">
-            <img src="/img/img3.jpg" alt="" className="img1" />
-          </div>
-        </div>
-      </div>
-
-
+                            <h3 className="heading">Welcome to Atometed Email Sender App</h3>
+                            <div className="heading2">
+                                <button type="submit" to={'/send-mail'} className="btn btn-success" >Send Mail</button>
+                                {/* <Link type="submit" className="btn btn-success" to={"/send-mail"}>Sign mail</Link> */}
+                            </div>
+                        </div>
+                        <div className="img1" id="inner-left">
+                            <img src="/img/img3.jpg" alt="" className="img1" />
+                        </div>
+                    </div>
+                </div>
 
 
-            
+
+
+
             </>
             // <form onSubmit={this.handleSubmit}>
 
-                    //     <h3>Log in</h3>
+            //     <h3>Log in</h3>
 
             //     <div className="form-group">
-                        //         <label>Email</label>
+            //         <label>Email</label>
             //         <input name="mymail" type="email" id="mymail" className="form-control" placeholder="Enter email" value={this.state.value} onChange={this.handleChange} />
             //     </div>
 
             //     <div className="form-group">
-                        //         <label>Password</label>
+            //         <label>Password</label>
             //         <input name="mypassword" type="password" id="mypassword" className="form-control" placeholder="Enter password" value={this.state.value} onChange={this.handleChange} />
             //     </div>
 
             //     <div className="btn-div">
-                        //     <button type="submit" className="btn btn-dark">Sign in</button>
+            //     <button type="submit" className="btn btn-dark">Sign in</button>
             //     </div>
             // </form>
         );

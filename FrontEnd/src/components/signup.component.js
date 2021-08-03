@@ -53,7 +53,7 @@ export default class Signup extends Component {
 
             <div className="outer">
                 <div className="middle">
-                    <div className="inner">
+                    <div className="inner" id="inner-right">
                         <form onSubmit={this.handleSubmit}>
 
                             <h3>Signup</h3>
@@ -79,7 +79,7 @@ export default class Signup extends Component {
             </form>
                 </div>
 
-                <div className="img1">
+                <div className="img1" id="inner-left">
                     <img src="/img/img1.jpg" alt="" className="img1" />
                 </div>
             </div>

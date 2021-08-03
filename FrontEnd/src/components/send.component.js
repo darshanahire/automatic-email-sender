@@ -4,7 +4,7 @@ import { Redirect } from "react-router";
 import axios from "axios";
 
 
-let k=1;
+let k = 1;
 export default class send extends Component {
 
   constructor(props) {
@@ -26,15 +26,15 @@ export default class send extends Component {
 
     this.setState({ [name]: value });
   }
-   handleSubmit(event) {
+  handleSubmit(event) {
     // console.log(this.state)
     let username = this.state.username;
     let friendsEmail = this.state.friendsEmail;
     let body = this.state.body;
     event.preventDefault();
 
-    axios.post("/esend", { username, friendsEmail, body }).then(() => {  
-      alert("Mail Sends successfully...")   
+    axios.post("/esend", { username, friendsEmail, body }).then(() => {
+      alert("Mail Sends successfully...")
       window.location.reload();
       console.log("mail send successfully from react....");
     }).catch((error) => {
@@ -46,7 +46,7 @@ export default class send extends Component {
     return (<>
       <div className="outer">
         <div className="middle">
-          <div className="inner">
+          <div className="inner" id="inner-right">
             <form >
               <h3>Send Mail</h3>
               <div className="form-group">
@@ -66,11 +66,12 @@ export default class send extends Component {
               </div>
             </form>
           </div>
-          <div className="img1">
+          <div className="img1" id="inner-left">
             <img src="/img/img2.jpg" alt="" className="img1" />
           </div>
         </div>
       </div>
+      <div id="note">*Note -By Default Gmail not allow to Third Party Apps to Send Mail, So Please allow it to Send Mails.</div>
     </>
     );
   }

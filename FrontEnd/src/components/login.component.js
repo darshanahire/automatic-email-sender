@@ -33,11 +33,11 @@ export default class Login extends Component {
         let mypassword = this.state.mypassword;
 
         event.preventDefault();
-        axios.post("/login", { username,mypassword }).then(() => {
-            window.localStorage.setItem("key",username);
+        axios.post("/login", { username, mypassword }).then(() => {
+            window.localStorage.setItem("key", username);
             alert("user Login Successfully")
             console.log("user Login Successfully");
-            window.location.href="https://automatic-email-sender.herokuapp.com/"
+            window.location.href = "https://automatic-email-sender.herokuapp.com/"
 
         }).catch((error) => {
             event.preventDefault();
@@ -55,7 +55,7 @@ export default class Login extends Component {
 
             <div className="outer">
                 <div className="middle">
-                    <div className="inner">
+                    <div className="inner " id="inner-right">
                         <form onSubmit={this.handleSubmit}>
 
                             <h3>Login</h3>
@@ -71,19 +71,16 @@ export default class Login extends Component {
                             <div className="btn-div">
                                 <button type="submit" className="btn btn-dark" >Login</button>
                             </div>
-                          
-                                
-                
-            </form>
-                </div>
+                        </form>
+                    </div>
 
-                <div className="img1">
-                    <img src="/img/img1.jpg" alt="" className="img1" />
+                    <div className="img1" id="inner-left">
+                        <img src="/img/img1.jpg" alt="" className="img1" />
+                    </div>
                 </div>
             </div>
-        </div>
 
-</>
+        </>
 
 
         );

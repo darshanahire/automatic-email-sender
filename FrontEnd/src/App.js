@@ -1,6 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
+// import './App.css';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { Redirect ,useHistory } from 'react-router';
 
@@ -36,28 +36,32 @@ const AuthRoute =({component:Component,...rest})=>(
 function App() {
   return (<Router>
     <div className="App">
-      <nav className="navbar navbar-expand-lg navbar-light fixed-top">
-        <div className="container">
-          <Link className="navbar-brand" to={"/"}>Atometed Email Sender</Link>
-          <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
-            <ul className="navbar-nav ml-auto">
-              <li className="nav-item">
-                <Link className="nav-link" to={"/Login"}>Login</Link>
+      <div>
+      <nav className="navbar navbar-expand-lg navbar-light">
+        
+          
+          
+            <ul className=" dispalyflex">
+          <Link className="navbar-brand" to={"/"}>Autometic Email Sender</Link>
+              <li className="nav-item1">
+                <Link className="nav-link1" to={"/Login"}>Login</Link>
               </li>
-              <li className="nav-item">
-                <Link className="nav-link" to={"/signup"}>Signup</Link>
+              <li className="nav-item1">
+                <Link className="nav-link1" to={"/signup"}>Signup</Link>
               </li>
-              <li className="nav-item">
-                <Link className="nav-link" to={"/send-mail"}>Send mail</Link>
+              <li className="nav-item1">
+                <Link className="nav-link1" to={"/send-mail"}>Send mail</Link>
               </li>
               
-              <li className="nav-item float">
-                <Link className="nav-link"  to={"/logout"}>Log out</Link>
+              <li className="nav-item1" id="float">
+                <Link className="nav-link1"  to={"/logout"}>Log out</Link>
               </li>
             </ul>
-          </div>
-        </div>
+          
+        
       </nav>
+      </div>
+
       <Switch>
               <AuthRoute exact path='/' component={Home} />
               <Route  exact path="/Login" component={login} />
