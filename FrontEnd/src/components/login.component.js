@@ -32,9 +32,9 @@ export default class Login extends Component {
         let username = this.state.username;
         let mypassword = this.state.mypassword;
 
+        event.preventDefault();
         axios.post("/login", { username,mypassword }).then(() => {
             window.localStorage.setItem("key",username);
-            event.preventDefault();
             alert("user Login Successfully")
             console.log("user Login Successfully");
             window.location.href="https://automatic-email-sender.herokuapp.com/"

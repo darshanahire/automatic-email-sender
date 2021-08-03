@@ -31,8 +31,8 @@ export default class Signup extends Component {
         let myEmail = this.state.myEmail;
         let mypassword = this.state.mypassword;
 
+        event.preventDefault();
         axios.post("/save-to-db", { username,myEmail,mypassword }).then(() => {
-            event.preventDefault();
             alert("Signup sucessfully,please Login")
             console.log("user crated");
             window.location.href="https://automatic-email-sender.herokuapp.com/login"
