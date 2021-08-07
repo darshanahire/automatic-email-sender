@@ -1,6 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import './App.css';
+import './App.css';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { Redirect ,useHistory } from 'react-router';
 
@@ -35,6 +35,7 @@ const AuthRoute =({component:Component,...rest})=>(
 
 function App() {
   return (<Router>
+    <meta name="viewport" content="width=device-width, initial-scale= 1.0" />
     <div className="App">
       <div>
       <nav className="navbar navbar-expand-lg navbar-light">
@@ -54,7 +55,7 @@ function App() {
               </li>
               
               <li className="nav-item1" id="float">
-                <Link className="nav-link1"  to={"/logout"}>Log out</Link>
+                <Link className="nav-link1"  to={"/Login"} onClick={() => window.localStorage.clear()}>Log out</Link>
               </li>
             </ul>
           
@@ -66,7 +67,6 @@ function App() {
               <AuthRoute exact path='/' component={Home} />
               <Route  exact path="/Login" component={login} />
               <Route exact path='/signup' component={Signup} />
-              <Route exact path='/logout' component={Logout} />
               <AuthRoute exact path='/send-mail' component={send} />
               
             </Switch>
