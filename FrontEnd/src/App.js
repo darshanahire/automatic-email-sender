@@ -2,13 +2,13 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import { Redirect ,useHistory } from 'react-router';
+import { Redirect  } from 'react-router';
 
 import Home from "./components/Home.component";
 import send from "./components/send.component";
 import Signup from "./components/signup.component";
 import login from "./components/login.component";
-import Logout from "./components/logout.component";
+
 
 const checkAuth=()=>{
   let key=window.localStorage.getItem('key');
@@ -39,9 +39,6 @@ function App() {
     <div className="App">
       <div>
       <nav className="navbar navbar-expand-lg navbar-light">
-        
-          
-          
             <ul className=" dispalyflex">
           <Link className="navbar-brand" to={"/"}>Autometic Email Sender</Link>
               <li className="nav-item1">
@@ -64,7 +61,7 @@ function App() {
       </div>
 
       <Switch>
-              <AuthRoute exact path='/' component={Home} />
+              <Route exact path='/' component={Home} />
               <Route  exact path="/Login" component={login} />
               <Route exact path='/signup' component={Signup} />
               <AuthRoute exact path='/send-mail' component={send} />

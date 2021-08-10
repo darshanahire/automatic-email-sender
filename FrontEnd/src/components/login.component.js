@@ -1,10 +1,8 @@
 // import React, { Component } from "react";
-import React, { Component, useState } from "react";
-import { useHistory } from "react-router";
+import React, { Component } from "react";
+
 import axios from "axios";
-
-
-
+import alertBox from "./alertBox";
 export default class Login extends Component {
 
     constructor(props) {
@@ -18,6 +16,7 @@ export default class Login extends Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
+    
     handleChange(event) {
         const target = event.target;
         var name = target.name;
@@ -36,10 +35,12 @@ export default class Login extends Component {
         axios.post("/login", { username, mypassword }).then(() => {
             window.localStorage.setItem("key", username);
             alert("user Login Successfully")
+            // <alertBox msg="user Login Successfully"/>
             console.log("user Login Successfully");
             window.location.href = "https://automatic-email-sender.herokuapp.com/"
 
         }).catch((error) => {
+            // <alertBox msg="Please Enter correct Username or Password"/>;
             event.preventDefault();
             console.log(error);
             alert("Please Enter correct Username or Password")

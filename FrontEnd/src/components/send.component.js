@@ -1,10 +1,7 @@
 // import React, { Component } from "react";
-import React, { Component, useState } from "react";
-import { Redirect } from "react-router";
+import React, { Component } from "react";
 import axios from "axios";
 
-
-let k = 1;
 export default class send extends Component {
 
   constructor(props) {
