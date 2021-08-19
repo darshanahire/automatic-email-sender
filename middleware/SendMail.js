@@ -18,7 +18,7 @@ const SendMail = (username, friendsEmail, d) => {
 
                     let dbuser = res.email;
                     let dbpassword = res.password
-                    console.log(dbuser,dbpassword);
+                    // console.log(dbuser,dbpassword);
                     
                     const transport = mailer.createTransport(
                         {
@@ -37,7 +37,7 @@ const SendMail = (username, friendsEmail, d) => {
                     }
                     transport.sendMail(body, async function (err, data) {
                         if (err) {
-                            console.log("error occured in transport.sendMail");
+                            console.log("error occured in transport sendMail");
                             console.log(err);
                             reject();
                             console.log(err.errresponseCode)
