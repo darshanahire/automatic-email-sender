@@ -34,13 +34,13 @@ app.use(router);
 // app.use("/send-mail",isTokenPresent,router)
 // app.use("/esend",isTokenPresent,router)
 // app.use("/api/sign-in",router)
-if(process.env.NODE_ENV === "production"){
-    app.use(express.static("FrontEnd/build"));
+// if(process.env.NODE_ENV !== "production"){
+    // console.log(process.env.NODE_ENV)
 app.use(express.static("FrontEnd/build"));
 const path = require("path");
 app.get("*", (req, res) => {
 res.sendFile(path.join(__dirname,"FrontEnd", 'build', 'index.html'));
-})}
+})
 
 
 
