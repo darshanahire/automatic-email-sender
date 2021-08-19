@@ -18,14 +18,14 @@ const SendMail = (username, friendsEmail, d) => {
 
                     let dbuser = res.email;
                     let dbpassword = res.password
+                    console.log(dbuser,dbpassword);
+                    
                     const transport = mailer.createTransport(
                         {
                             service: "gmail",
                             auth: {
-                                user: dbuser,
+                                user: dbuser ,
                                 pass: dbpassword
-                                // user: process.env.E_USER,
-                                // pass: process.env.E_PASS
                             }
                         }
                     )
@@ -37,7 +37,7 @@ const SendMail = (username, friendsEmail, d) => {
                     }
                     transport.sendMail(body, async function (err, data) {
                         if (err) {
-                            console.log("error occured");
+                            console.log("error occured in transport.sendMail");
                             console.log(err);
                             reject();
                             console.log(err.errresponseCode)

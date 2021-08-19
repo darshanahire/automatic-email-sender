@@ -32,7 +32,7 @@ export default class Login extends Component {
         let mypassword = this.state.mypassword;
 
         event.preventDefault();
-        axios.post("/login", { username, mypassword }).then(() => {
+        axios.post("/Login", { username, mypassword }).then(() => {
             window.localStorage.setItem("key", username);
             alert("user Login Successfully")
             // <alertBox msg="user Login Successfully"/>

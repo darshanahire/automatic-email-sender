@@ -68,8 +68,8 @@ export default class send extends Component {
           </div>
         </div>
       </div>
-      <div id="note">*Note -By Default Gmail not allow to Third Party Apps to Send Mail, So Please allow it to Send Mails.</div>
+      <div id="note">*Note -By Default Gmail not allow to Third Party Apps to Send Mail so turn it on from here, So Please click <a href="https://myaccount.google.com/u/2/lesssecureapps?pli=1&rapt=AEjHL4PdvbZ46bvqYAydW9VeYl1dT78xhpG6GBsGkob6ZVUhFjUaECMUf4NRtZj-XCnaHkvnRWXEAUXl49xIpWYB3ExOahZb4Q" target="_blank"> allow  </a>to Send Mails.</div>
     </>
     );
   }
-}
+} 
