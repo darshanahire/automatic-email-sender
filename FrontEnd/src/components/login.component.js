@@ -54,32 +54,31 @@ export default class Login extends Component {
 
         return (<>
 
-            <div className="outer">
-                <div className="middle">
-                    <div className="inner " id="inner-right">
-                        <form onSubmit={this.handleSubmit}>
 
-                            <h3>Login</h3>
+                <div className="row mx-0 text-start">
+                    <div className="inner col-10 col-md-4 " id="inner-right" style={{marginTop:"150px"}}>
+                        <form onSubmit={this.handleSubmit} className="col-10 mx-auto">
+
+                            <h3 className="text-center">Login</h3>
                             <div className="form-group">
-                                <label>UserName</label>
+                                <label className="mt-2 mb-1">UserName</label>
                                 <input name="username" type="text" id="username" className="form-control" placeholder="Enter UserName" value={this.state.value} onChange={this.handleChange} />
                             </div>
                             <div className="form-group">
-                                <label>Password</label>
+                                <label className="mt-2 mb-1">Password</label>
                                 <input name="mypassword" type="password" id="mypassword" className="form-control" placeholder="Enter your Email password" value={this.state.value} onChange={this.handleChange} />
                             </div>
 
-                            <div className="btn-div">
+                            <div className="btn-div ">
                                 <button type="submit" className="btn btn-dark" >Login</button>
                             </div>
                         </form>
                     </div>
 
-                    <div className="img1" id="inner-left">
+                    <div className="img1 col-12 col-md-6 my-5" id="inner-left">
                         <img src="/img/img1.jpg" alt="" className="img1" />
                     </div>
                 </div>
-            </div>
 
         </>
 

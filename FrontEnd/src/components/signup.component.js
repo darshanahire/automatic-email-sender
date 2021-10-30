@@ -50,12 +50,11 @@ export default class Signup extends Component {
 
         return (<>
 
-            <div className="outer">
-                <div className="middle">
-                    <div className="inner" id="inner-right">
-                        <form onSubmit={this.handleSubmit}>
+<div className="row mx-0 text-start">
+                    <div className="inner col-10 col-md-4 " id="inner-right" style={{marginTop:"150px"}}>
+                        <form onSubmit={this.handleSubmit} className="col-10 mx-auto">
 
-                            <h3>Signup</h3>
+                            <h3 className="text-center">Signup</h3>
                             <div className="form-group">
                                 <label>UserName</label>
                                 <input name="username" type="text" id="username" className="form-control" placeholder="Enter UserName" value={this.state.value} onChange={this.handleChange} />
@@ -77,12 +76,10 @@ export default class Signup extends Component {
                 
             </form>
                 </div>
-
-                <div className="img1" id="inner-left">
+                <div className="img1 col-12 col-md-6 my-5" id="inner-left">
                     <img src="/img/img1.jpg" alt="" className="img1" />
                 </div>
             </div>
-        </div>
 
 </>
 
